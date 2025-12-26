@@ -124,8 +124,11 @@ def safe_extract_json(text: str) -> Optional[Dict[str, Any]]:
 
 def call_gemini(prompt: str, business_type: str, bundle: str, project_title: str) -> Dict[str, Any]:
     if not GEMINI_API_KEY:
-        return {"ok": False, "error": "GEMINI_API_KEY is missing in .env", "rawText": ""}
-
+        return {
+            "ok": False,
+            "error": "Service temporarily unavailable. Please try again in a moment.",
+            "rawText": "",
+        }
     bundle_instructions = BUNDLE_PROMPTS.get(bundle, BUNDLE_PROMPTS["custom"])
 
     system_prompt = f"""
