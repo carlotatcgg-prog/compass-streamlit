@@ -328,18 +328,17 @@ if st.session_state.uses_left <= 0:
     st.subheader("🚀 Unlock Compass")
 
     st.write(
-       "You've reached the free limit.\n\n"
-"Compass is designed to help you ship real systems, not just ideas.\n"
-"Get unlimited access and build faster."
+        "Compass builds **systems**, not just text.\n\n"
+        "Get unlimited generations, saved projects, and advanced bundles."
     )
 
     email = st.text_input("Get early access (email)")
 
-   if st.button("Join early access"):
-    if email and "@" in email:
-        with open("early_access.csv", "a") as f:
-            f.write(f"{email},{datetime.utcnow().isoformat()}\n")
-        st.success("You're on the list! We'll be in touch.")
-    else:
-        st.error("Please enter a valid email.")
+    if st.button("Join early access"):
+        if email and "@" in email:
+            with open("early_access.csv", "a") as f:
+                f.write(f"{email},{datetime.utcnow().isoformat()}\n")
+            st.success("You're on the list! We'll be in touch.")
+        else:
+            st.error("Please enter a valid email.")
 
