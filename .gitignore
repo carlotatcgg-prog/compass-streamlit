@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+.env
+early_access.csv
+*.pyc
+.DS_Store
