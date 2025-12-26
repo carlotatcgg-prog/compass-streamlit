@@ -5,12 +5,8 @@ from typing import Any, Dict, List, Optional, TypedDict
 
 import requests
 import streamlit as st
-from dotenv import load_dotenv
-from pathlib import Path
 from datetime import datetime
 
-
-load_dotenv(dotenv_path=Path(__file__).parent / ".env")
 
 # DEBUG (temporal)
 
