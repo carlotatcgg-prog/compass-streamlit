@@ -335,7 +335,7 @@ if st.session_state.uses_left <= 0:
 
     email = st.text_input("Get early access (email)")
 
-    if st.button("Join early access"):
+   if st.button("Join early access"):
     if email and "@" in email:
         with open("early_access.csv", "a") as f:
             f.write(f"{email},{datetime.utcnow().isoformat()}\n")
